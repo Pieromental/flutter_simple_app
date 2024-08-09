@@ -85,6 +85,44 @@ class _BasicAppState extends State<BasicApp> {
           textDirection: TextDirection.ltr,
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        /*      onPressed: _likedChanged,
+        backgroundColor: Colors.lime[600],
+        child: const Icon(
+          Icons.link,
+          color: Colors.white,
+        ),*/
+        onPressed: _likedChanged,
+        backgroundColor: Colors.lime[600],
+        child: const Icon(Icons.link),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: const BottomAppBar(
+        elevation: 9.0,
+        shape: CircularNotchedRectangle(),
+        color: Colors.white,
+        notchMargin: 8.0,
+/*        color: Colors.green[400],
+        shape: CircularNotchedRectangle(),*/
+        child: SizedBox(
+          height: 50, // Ajusta la altura aquí según tus necesidades
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              IconButton(
+                onPressed: null,
+                icon: Icon(Icons.camera_enhance),
+                color: Colors.white,
+              ),
+              IconButton(
+                onPressed: null,
+                icon: Icon(Icons.arrow_back),
+                color: Colors.white,
+              )
+            ],
+          ),
+        ),
+      ),
     );
   }
 
