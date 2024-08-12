@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:basic_flutter_app/routes.dart';
 
 class BasicApp extends StatefulWidget {
   const BasicApp({super.key, required this.title});
 
   // Lista de proyectos, cada uno con un nombre, una ruta y un ícono asociado
   final List<Map<String, dynamic>> projects = const [
-    {'title': 'Proyecto 1', 'route': '/project1', 'icon': Icons.assignment}
+    {'title': 'Contador', 'route': '/project1', 'icon': Icons.numbers}
     // Agrega más proyectos aquí
   ];
   final String title;
