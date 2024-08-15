@@ -5,7 +5,8 @@ class BasicApp extends StatefulWidget {
 
   // Lista de proyectos, cada uno con un nombre, una ruta y un ícono asociado
   final List<Map<String, dynamic>> projects = const [
-    {'title': 'Contador', 'route': '/project1', 'icon': Icons.numbers}
+    {'title': 'Contador', 'route': '/counter_project', 'icon': Icons.numbers},
+    {'title': 'Chat', 'route': '/chat_project', 'icon': Icons.chat}
     // Agrega más proyectos aquí
   ];
   final String title;

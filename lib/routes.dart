@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'screens/basic_app.dart';
-import 'project1/screens/counter.dart';
-
+import 'counter_project/screens/counter.dart';
+import 'chat_project/screens/chat_screen.dart';
 
 final Map<String, WidgetBuilder> appRoutes = {
   '/': (context) => const BasicApp(title: 'Simple Flutter App'),
-  '/project1': (context) => const CounterScreen(),
+  '/counter_project': (context) => const CounterScreen(),
+  '/chat_project': (context) => const ChatScreen(),
   // Agrega más rutas según sea necesario
 };
