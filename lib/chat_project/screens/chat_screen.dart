@@ -22,7 +22,7 @@ class ChatScreen extends StatelessWidget {
           ),
           title: const Text('Henry Cavil'),
         ),
-        body: ChatView(),
+        body: const ChatView(),
       ),
     );
   }

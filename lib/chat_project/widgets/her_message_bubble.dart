@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../domain/entities/message.dart';
+
 class HerMessageBubble extends StatelessWidget {
-  const HerMessageBubble({super.key});
+  final Message message;
+  const HerMessageBubble({super.key, required this.message});
 
   @override
   Widget build(BuildContext context) {
@@ -12,18 +15,18 @@ class HerMessageBubble extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20), color: colors.secondary),
-          child: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: Text(
-              'Hey cute guy, free this weekend?',
-              style: TextStyle(color: Colors.white),
+              message.text,
+              style: const TextStyle(color: Colors.white),
             ),
           ),
         ),
         const SizedBox(
           height: 5,
         ),
-        const _ImageBubble(),
+        _ImageBubble(url: message.imgUrl),
         const SizedBox(
           height: 10,
         ),
@@ -33,7 +36,8 @@ class HerMessageBubble extends StatelessWidget {
 }
 
 class _ImageBubble extends StatelessWidget {
-  const _ImageBubble({super.key});
+  final String? url;
+  const _ImageBubble({super.|key,  this.url});
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +48,7 @@ class _ImageBubble extends StatelessWidget {
           width: size.width * 0.7,
           height: 150,
           fit: BoxFit.cover,
-          'https://yesno.wtf/assets/yes/0-c44a7789d54cbdcad867fb7845ff03ae.gif',
+          url!,
           loadingBuilder: (context, child, loadingProgress) {
             if (loadingProgress == null) return child;
             return Container(
