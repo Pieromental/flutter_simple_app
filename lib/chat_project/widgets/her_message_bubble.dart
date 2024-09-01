@@ -37,7 +37,7 @@ class HerMessageBubble extends StatelessWidget {
 
 class _ImageBubble extends StatelessWidget {
   final String? url;
-  const _ImageBubble({super.|key,  this.url});
+  const _ImageBubble({super.key,  this.url});
 
   @override
   Widget build(BuildContext context) {
